@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>瑶音闯关 - 守护蓝靛瑶千年文化</title>
+    <meta name="description" content="瑶音闯关是一款游戏化瑶语学习平台，通过互动游戏帮助用户学习蓝靛瑶语，体验瑶族文化，传承千年民族文脉。">
+    <meta name="keywords" content="瑶音闯关,瑶语学习,蓝靛瑶,瑶族文化,盘王节,瑶绣,非物质文化遗产,民族语言保护">
+    <meta property="og:title" content="瑶音闯关 - 守护蓝靛瑶千年文化">
+    <meta property="og:description" content="以盘王鼓为声，以瑶锦为纹，以游戏为桥，让蓝靛瑶文化在数字时代生生不息">
+    <meta property="og:type" content="website">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script>
@@ -135,7 +140,7 @@
                 </a>
             </div>
             <div class="relative w-full max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl">
-                <img src="./1.png"
+                <img src="3.png"
                      alt="瑶族长桌宴"
                      class="w-full h-auto object-cover">
                 <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
@@ -160,9 +165,9 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- 文化卡片1：盘王鼓制作 -->
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
-                    <img src="./2.png"
+                    <img src="2.png"
                          alt="盘王鼓制作"
-                         class="w-full h-64 object-cover">
+                         class="w-full h-64 object-cover" loading="lazy">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-yaoBlack mb-3 flex items-center">
                             <i class="fa fa-drum text-yaoRed mr-2"></i>
@@ -179,9 +184,9 @@
 
                 <!-- 文化卡片2：蓝靛染布 -->
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
-                    <img src="./5.png"
+                    <img src="5.png"
                          alt="蓝靛染布"
-                         class="w-full h-64 object-cover">
+                         class="w-full h-64 object-cover" loading="lazy">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-yaoBlack mb-3 flex items-center">
                             <i class="fa fa-tint text-yaoBlue mr-2"></i>
@@ -198,9 +203,9 @@
 
                 <!-- 文化卡片3：瑶族儿童 -->
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
-                    <img src="./4.png"
+                    <img src="4.png"
                          alt="瑶族儿童"
-                         class="w-full h-64 object-cover">
+                         class="w-full h-64 object-cover" loading="lazy">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-yaoBlack mb-3 flex items-center">
                             <i class="fa fa-child text-yaoYellow mr-2"></i>
@@ -217,9 +222,9 @@
 
                 <!-- 文化卡片4：芦笙对歌 -->
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
-                    <img src="./1.png"
+                    <img src="1.png"
                          alt="芦笙对歌"
-                         class="w-full h-64 object-cover">
+                         class="w-full h-64 object-cover" loading="lazy">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-yaoBlack mb-3 flex items-center">
                             <i class="fa fa-music text-yaoRed mr-2"></i>
@@ -237,9 +242,9 @@
                 <!-- 文化卡片5：瑶族长桌宴 -->
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover md:col-span-2 lg:col-span-2">
                     <div class="flex flex-col md:flex-row">
-                        <img src="./3.png"
+                        <img src="3.png"
                              alt="瑶族长桌宴"
-                             class="w-full md:w-1/2 h-64 object-cover">
+                             class="w-full md:w-1/2 h-64 object-cover" loading="lazy">
                         <div class="p-6 md:w-1/2 flex flex-col justify-center">
                             <h3 class="text-xl font-bold text-yaoBlack mb-3 flex items-center">
                                 <i class="fa fa-cutlery text-yaoYellow mr-2"></i>
@@ -275,9 +280,9 @@
             <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
                 <div class="flex flex-col md:flex-row">
                     <div class="md:w-1/2">
-                        <img src="./2.png"
+                        <img src="2.png"
                              alt="盘王鼓传承人"
-                             class="w-full h-full object-cover">
+                             class="w-full h-full object-cover" loading="lazy">
                     </div>
                     <div class="md:w-1/2 p-8 flex flex-col justify-center">
                         <h3 class="text-2xl font-bold text-yaoBlack mb-4">盘王鼓传承人 · 王阿公</h3>
@@ -521,7 +526,9 @@
         // 移动端菜单切换
         const menuBtn = document.getElementById('menuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
-        menuBtn.addEventListener('click', () => {
+
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             mobileMenu.classList.toggle('hidden');
         });
 
@@ -530,6 +537,13 @@
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
+        });
+
+        // 点击外部关闭移动端菜单
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && e.target !== menuBtn && !menuBtn.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
         });
 
         // 平滑滚动
